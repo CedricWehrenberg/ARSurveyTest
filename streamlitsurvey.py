@@ -13,9 +13,10 @@ st.subheader("📱 Möbelstück in AR platzieren")
 st.write("Klicken Sie auf das Möbelstück und wählen Sie 'In AR anzeigen', um es in Ihrem Raum zu platzieren.")
 
 model_html = """
-<model-viewer src="https://modelviewer.dev/shared-assets/models/Chair.glb" 
-    ar ar-modes="webxr scene-viewer quick-look" 
-    camera-controls auto-rotate style="width: 100%; height: 400px;">
+<model-viewer ar camera-controls touch-action="pan-y" auto-rotate src="../../shared-assets/models/Astronaut.glb" alt="A 3D model of an astronaut">
+  <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
+      👋 Activate AR
+  </button>
 </model-viewer>
 """
 
